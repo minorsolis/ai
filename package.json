@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "/ai",
+  "homepage": "https://minorsolis.github.io/ai",
   "eslintConfig": {
     "extends": [
       "react-app",

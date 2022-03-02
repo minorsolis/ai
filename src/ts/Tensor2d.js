@@ -223,6 +223,96 @@ Data example
                     </div>
                   </div>
                 </div>
+
+                <div className="col-xl-12 mb-4">
+                  <div className="card border-left-primary shadow h-100 py-2">
+                    <div className="card-body">
+                      <div className="row no-gutters align-items-center">
+                        <h4>Code</h4>
+                      </div>
+                      <div className="row no-gutters align-items-center">
+                        <pre>
+                          {`
+  React.useEffect(() => {
+    // model
+    const model = tf.sequential();
+
+    // layer
+    const hidden = tf.layers.dense({
+      units: 4,
+      inputShape: [2],
+      activation: "sigmoid",
+    });
+    model.add(hidden);
+
+    // output
+    const output = tf.layers.dense({
+      units: 1,
+      activation: "sigmoid",
+    });
+    model.add(output);
+
+    // options sgd
+    const sgdOptions = tf.train.sgd(0.1);
+
+    // compile
+    model.compile({
+      optimizer: sgdOptions,
+      loss: tf.losses.meanSquaredError,
+    });
+
+    /**
+Data example
+
+[ X1 | X2  ]
+0   | 0
+0.1 | ?
+0.2 | 0.2
+0.3 | ?
+0.4 | 0.4
+0.5 | ?
+
+|   /
+|  /
+| /
+|/_ _ _ _ _ 
+
+*/
+    const x1 = tf.tensor2d([
+      [0, 0],
+      [0.2, 0.2],
+      [0.4, 0.4],
+    ]);
+    const x2 = tf.tensor2d([[0.1], [0.3], [0.5]]);
+
+    const epochFunction = async function epoch() {
+      let lossArray = [];
+      for (let i = 0; i < total_tries; i++) {
+        const result = await model.fit(x1, x2, { suffle: true, epochs: 100 });
+        const current_loss = (result.history.loss[0] * 100).toFixed(2);
+        lossArray.push(current_loss);
+        console.log("current_loss", current_loss, "%");
+      }
+      setLosses(lossArray);
+    };
+
+    epochFunction().then(() => {
+      const salid = model.predict(x1);
+      console.log("Final response", salid);
+      salid.print();
+      let predictionsArray = [];
+      salid.dataSync().forEach((row) => {
+        predictionsArray.push(row);
+      });
+      setPredictions(predictionsArray);
+    });
+  }, []);
+`}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

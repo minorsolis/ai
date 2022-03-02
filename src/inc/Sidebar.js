@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-export default () => {
+
+const Component = () => {
   return (
     <ul
       className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
@@ -8,7 +9,7 @@ export default () => {
       {/* Sidebar - Brand */}
       <Link
         className="sidebar-brand d-flex align-items-center justify-content-center"
-        to="/"
+        to="/ai/"
       >
         <div className="sidebar-brand-icon">
           <i className="fas fa-robot" />
@@ -23,7 +24,7 @@ export default () => {
       <li className="nav-item">
         <a
           className="nav-link collapsed"
-          href="#"
+          href="#top"
           data-toggle="collapse"
           data-target="#collapseTwo"
           aria-expanded="true"
@@ -40,7 +41,7 @@ export default () => {
         >
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">TensorFlow</h6>
-            <Link className="collapse-item" to="/tensor2d">
+            <Link className="collapse-item" to="/ai/tensor2d">
               2D Tensor
             </Link>
           </div>
@@ -54,3 +55,4 @@ export default () => {
     </ul>
   );
 };
+export default Component;

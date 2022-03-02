@@ -1,4 +1,4 @@
-export default () => {
+const Component = () => {
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
       <button
@@ -10,3 +10,4 @@ export default () => {
     </nav>
   );
 };
+export default Component;

@@ -3,7 +3,7 @@ import Navbar from "./inc/Navbar";
 import Footer from "./inc/Footer";
 import Last from "./inc/Last";
 
-export default () => {
+const App = () => {
   return (
     <div>
       <div id="wrapper">
@@ -38,3 +38,5 @@ export default () => {
     </div>
   );
 };
+
+export default App;

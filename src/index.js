@@ -8,8 +8,8 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/tensor2d" element={<Tensor2d />} />
+      <Route path="/ai/" element={<App />} />
+      <Route path="/ai/tensor2d" element={<Tensor2d />} />
     </Routes>
   </BrowserRouter>,
   rootElement

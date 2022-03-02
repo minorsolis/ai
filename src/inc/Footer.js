@@ -1,4 +1,4 @@
-export default () => {
+const Component = () => {
   return (
     <footer className="sticky-footer bg-white">
       <div className="container my-auto">
@@ -10,3 +10,5 @@ export default () => {
     </footer>
   );
 };
+
+export default Component;

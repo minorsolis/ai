@@ -7,7 +7,7 @@ import * as tf from "@tensorflow/tfjs";
 
 const total_tries = 12;
 
-export default () => {
+const Component = () => {
   const [losses, setLosses] = React.useState([]);
   const [predictions, setPredictions] = React.useState([]);
 
@@ -233,3 +233,5 @@ Data example
     </div>
   );
 };
+
+export default Component;

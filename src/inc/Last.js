@@ -1,4 +1,4 @@
-export default () => {
+const Component = () => {
   return (
     <>
       <a className="scroll-to-top rounded" href="#page-top">
@@ -7,3 +7,4 @@ export default () => {
     </>
   );
 };
+export default Component;

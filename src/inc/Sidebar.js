@@ -50,6 +50,9 @@ const Component = () => {
             <Link className="collapse-item" to="/ai/object2">
               Object (static)
             </Link>
+            <Link className="collapse-item" to="/ai/toxic">
+              Text Toxicity
+            </Link>
           </div>
         </div>
       </li>

@@ -7,6 +7,7 @@ import Tensor2d from "./ts/Tensor2d";
 // import Npl from "./ts/Npl";
 import Object from "./ts/Object";
 import Object2 from "./ts/Object2";
+import Toxic from "./ts/Toxic";
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ render(
       <Route exact path="/ai/object" element={<Object />} />
       <Route exact path="/ai/object2" element={<Object2 />} />
       <Route exact path="/ai/tensor2d" element={<Tensor2d />} />
+      <Route exact path="/ai/toxic" element={<Toxic />} />
       <Route path="/*" element={<App />} />
     </Routes>
   </BrowserRouter>,

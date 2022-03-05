@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import Content from "../inc/Content";
 const Component = () => {
   const [model, setModel] = useState();
+  const [run, setRun] = useState(false);
   async function loadModel() {
     try {
       const model = await cocoSsd.load();
@@ -92,41 +93,43 @@ const Component = () => {
                 <h4>Open the camera of the device (abra la camara).</h4>
               </div>
               <div className="row no-gutters align-items-center">
-                <button
-                  variant={"contained"}
-                  style={{
-                    color: "white",
-                    backgroundColor: "blueviolet",
-                    width: "50%",
-                    maxWidth: "250px",
-                  }}
-                  onClick={() => {
-                    predictionFunction();
-                  }}
-                >
-                  Start Detect
-                </button>
-
-                <div style={{ position: "absolute", top: "100px" }}>
-                  <Webcam
-                    audio={false}
-                    id="img"
-                    ref={webcamRef}
-                    screenshotQuality={1}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={videoConstraints}
-                  />
+                <div className="col-sm-12">
+                  <button
+                    className="btn btn-success"
+                    onClick={() => {
+                      predictionFunction();
+                    }}
+                  >
+                    Start Detect
+                  </button>
                 </div>
 
-                <div
-                  style={{ position: "absolute", top: "100px", zIndex: "9999" }}
-                >
-                  <canvas
-                    id="myCanvas"
-                    width={videoWidth}
-                    height={videoHeight}
-                    style={{ backgroundColor: "transparent" }}
-                  />
+                <div className="col-sm-12 mt-2">
+                  <div style={{ position: "absolute", top: "100px" }}>
+                    <Webcam
+                      audio={false}
+                      id="img"
+                      ref={webcamRef}
+                      screenshotQuality={1}
+                      screenshotFormat="image/jpeg"
+                      videoConstraints={videoConstraints}
+                    />
+                  </div>
+
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "100px",
+                      zIndex: "9999",
+                    }}
+                  >
+                    <canvas
+                      id="myCanvas"
+                      width={videoWidth}
+                      height={videoHeight}
+                      style={{ backgroundColor: "transparent" }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

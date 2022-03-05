@@ -44,15 +44,12 @@ const Component = () => {
             <Link className="collapse-item" to="/ai/tensor2d">
               2D Tensor
             </Link>
-            {/* <Link className="collapse-item" to="/ai/npl">
-              NPL
-            </Link> */}
             <Link className="collapse-item" to="/ai/object">
               Object detection
             </Link>
-            {/* <Link className="collapse-item" to="/ai/linear">
-              Linear regression
-            </Link> */}
+            <Link className="collapse-item" to="/ai/object2">
+              Object (static)
+            </Link>
           </div>
         </div>
       </li>

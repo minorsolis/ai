@@ -1,15 +1,32 @@
 import * as React from "react";
 import ContainerComponent from "./mui/Container";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const Component = () => {
   return (
     <ContainerComponent>
       <Typography paragraph>
-        This is just a playground repo to learn and try AI. I will also be
-        putting the examples of the Google tensorflow.js program. <br />
+        This repository contains multiple examples of AI implemented with
+        React.js. <br />
+        The examples are from the internet and also from the: Google AI for Web
+        Based Machine Learning certificate.
         <br />
-        Enjoy!
+        <br />
+        For more information please go to:{" "}
+        <Button
+          variant="outlined"
+          href="https://www.tensorflow.org/"
+          target="_blank"
+          color="warning"
+        >
+          TensorFlow.js
+        </Button>
+        <br />
+        <br />
+        Feel free to clone and use then. Have an awesome day! <br />
+        <br />
+        Minor Solis
       </Typography>
     </ContainerComponent>
   );

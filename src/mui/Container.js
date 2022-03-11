@@ -67,7 +67,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export default function PersistentDrawerLeft(props) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  let openStatus = window.innerWidth > 700;
+  const [open, setOpen] = React.useState(openStatus);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -97,9 +98,6 @@ export default function PersistentDrawerLeft(props) {
           >
             <Typography variant="h6" noWrap component="div">
               <SmartToyIcon /> AI &amp; Machine Learning{" "}
-              <Typography variant="p" sx={{ fontSize: "60%" }}>
-                (Minor S.)
-              </Typography>
             </Typography>
           </ReactLink>
         </Toolbar>

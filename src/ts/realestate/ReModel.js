@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "../../inc/Content";
+import ContainerComponent from "../../mui/Container";
 import { TRAINING_DATA } from "../../data/RealEstate";
 import * as tf from "@tensorflow/tfjs";
 
@@ -108,20 +108,11 @@ const Component = () => {
   train();
 
   return (
-    <Content
-      title="Dataset review"
-      content={
-        <div className="col-xl-12 mb-4">
-          <div className="card border-left-primary shadow h-100 py-2">
-            <div className="card-body">
-              <div className="row no-gutters align-items-center">
-                <h4>Train and evaluate the model</h4>
-              </div>
-              <div className="row no-gutters align-items-center">
-                <div className="col-md-12">
-                  <h3>The console log will display all results</h3>
-                  <pre>
-                    {`
+    <ContainerComponent>
+      <div className="col-md-12">
+        <h3>The console log will display all results</h3>
+        <pre>
+          {`
  // Input feature pairs (House size, Number of Bedrooms)
  const INPUTS = TRAINING_DATA.inputs;
  // Current listed house prices in dollars given their features above
@@ -226,14 +217,9 @@ const Component = () => {
  train();	
 	
 	`}
-                  </pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
-    />
+        </pre>
+      </div>
+    </ContainerComponent>
   );
 };
 

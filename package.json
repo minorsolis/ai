@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.5.0",
+    "@mui/material": "^5.5.0",
     "@tensorflow-models/coco-ssd": "^2.2.2",
     "@tensorflow-models/qna": "^1.0.0",
     "@tensorflow-models/toxicity": "^1.2.2",

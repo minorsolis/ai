@@ -9,6 +9,8 @@ import Object from "./ts/Object";
 import Object2 from "./ts/Object2";
 import Toxic from "./ts/Toxic";
 import Plot from "./ts/realestate/Plot";
+import ReModel from "./ts/realestate/ReModel";
+
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
@@ -20,6 +22,7 @@ render(
       <Route exact path="/ai/tensor2d" element={<Tensor2d />} />
       <Route exact path="/ai/toxic" element={<Toxic />} />
       <Route exact path="/ai/plot" element={<Plot />} />
+      <Route exact path="/ai/remodel" element={<ReModel />} />
       <Route path="/*" element={<App />} />
     </Routes>
   </BrowserRouter>,

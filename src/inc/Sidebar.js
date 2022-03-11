@@ -44,6 +44,9 @@ const Component = () => {
             <Link className="collapse-item" to="/ai/plot">
               Dataset Review
             </Link>
+            <Link className="collapse-item" to="/ai/remodel">
+              Real Estate Model
+            </Link>
           </div>
         </div>
       </li>

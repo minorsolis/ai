@@ -1,7 +1,7 @@
 import React from "react";
 import Plot from "react-plotly.js";
-import Content from "../inc/Content";
-import { TRAINING_DATA } from "../data/RealEstate";
+import Content from "../../inc/Content";
+import { TRAINING_DATA } from "../../data/RealEstate";
 
 const Component = () => {
   let bedData = [];

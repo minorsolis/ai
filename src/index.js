@@ -8,7 +8,7 @@ import Tensor2d from "./ts/Tensor2d";
 import Object from "./ts/Object";
 import Object2 from "./ts/Object2";
 import Toxic from "./ts/Toxic";
-import Plot from "./ts/Plot";
+import Plot from "./ts/realestate/Plot";
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>

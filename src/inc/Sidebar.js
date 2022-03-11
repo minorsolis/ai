@@ -23,7 +23,34 @@ const Component = () => {
       <div className="sidebar-heading">TensorFlow</div>
       <li className="nav-item">
         <a
-          className="nav-link collapsed"
+          className="nav-link"
+          href="#top"
+          data-toggle="collapse"
+          data-target="#collapseTwo"
+          aria-expanded="true"
+          aria-controls="collapseTwo"
+        >
+          <i className="fas fa-fw fa-cog"></i>
+          <span>Real Estate</span>
+        </a>
+        <div
+          id="collapseTwo"
+          className="collapse show"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionSidebar"
+        >
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">TensorFlow</h6>
+            <Link className="collapse-item" to="/ai/plot">
+              Dataset Review
+            </Link>
+          </div>
+        </div>
+      </li>
+
+      <li className="nav-item">
+        <a
+          className="nav-link"
           href="#top"
           data-toggle="collapse"
           data-target="#collapseTwo"
@@ -35,7 +62,7 @@ const Component = () => {
         </a>
         <div
           id="collapseTwo"
-          className="collapse"
+          className="collapse show"
           aria-labelledby="headingTwo"
           data-parent="#accordionSidebar"
         >
@@ -56,6 +83,7 @@ const Component = () => {
           </div>
         </div>
       </li>
+
       {/* <hr className="sidebar-divider d-none d-md-block" />
 
       <div className="text-center d-none d-md-inline">

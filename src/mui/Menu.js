@@ -9,6 +9,8 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PanoramaIcon from "@mui/icons-material/Panorama";
 import LinearScaleIcon from "@mui/icons-material/LinearScale";
+import LayersIcon from "@mui/icons-material/Layers";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 
 const MenuComponent = () => {
   const menu = [
@@ -57,9 +59,24 @@ const MenuComponent = () => {
       url: "#",
     },
     {
+      label: "Multi-Layer",
+      url: "multilayer",
+      icon: <LayersIcon />,
+    },
+    {
       label: "2D Tensor",
       url: "tensor2d",
       icon: <LinearScaleIcon />,
+    },
+    {},
+    {
+      label: "Brain.js",
+      url: "#",
+    },
+    {
+      label: "Store Predict",
+      url: "brainStore",
+      icon: <StorefrontIcon />,
     },
   ];
 

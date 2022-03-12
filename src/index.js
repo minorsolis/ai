@@ -7,6 +7,8 @@ import Image from "./ts/vision/Image";
 import Toxic from "./ts/language/Toxic";
 import Plot from "./ts/realestate/Plot";
 import ReModel from "./ts/realestate/ReModel";
+import MultiLayer from "./ts/tensor/MultiLayer";
+import BrainStore from "./ts/brainjs/Store";
 
 const rootElement = document.getElementById("root");
 render(
@@ -18,6 +20,8 @@ render(
       <Route exact path="/ai/image" element={<Image />} />
       <Route exact path="/ai/toxic" element={<Toxic />} />
       <Route exact path="/ai/tensor2d" element={<Tensor2d />} />
+      <Route exact path="/ai/multilayer" element={<MultiLayer />} />
+      <Route exact path="/ai/brainStore" element={<BrainStore />} />
       <Route path="/*" element={<App />} />
     </Routes>
   </BrowserRouter>,

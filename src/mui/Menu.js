@@ -1,7 +1,6 @@
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
@@ -50,21 +49,6 @@ const MenuComponent = () => {
     },
     {},
     {
-      label: "Tensors",
-      url: "#",
-    },
-    {
-      label: "Multi-Layer",
-      url: "multilayer",
-      icon: <LayersIcon />,
-    },
-    {
-      label: "2D Tensor",
-      url: "tensor2d",
-      icon: <LinearScaleIcon />,
-    },
-    {},
-    {
       label: "Brain.js",
       url: "#",
     },
@@ -72,6 +56,21 @@ const MenuComponent = () => {
       label: "Store Predict",
       url: "brainStore",
       icon: <StorefrontIcon />,
+    },
+    {},
+    {
+      label: "Tensors (Raw)",
+      url: "#",
+    },
+    {
+      label: "2D Tensor",
+      url: "tensor2d",
+      icon: <LinearScaleIcon />,
+    },
+    {
+      label: "Multi-Layer",
+      url: "multilayer",
+      icon: <LayersIcon />,
     },
   ];
 

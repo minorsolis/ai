@@ -23,11 +23,6 @@ const MenuComponent = () => {
       url: "plot",
       icon: <ListAltIcon />,
     },
-    {
-      label: "House Prices",
-      url: "remodel",
-      icon: <HomeIcon />,
-    },
     {},
     {
       label: "Computer Vision",

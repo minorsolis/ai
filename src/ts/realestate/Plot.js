@@ -2,6 +2,7 @@ import React from "react";
 import Plot from "react-plotly.js";
 import { TRAINING_DATA } from "../../data/RealEstate";
 import ContainerComponent from "../../mui/Container";
+import { Link } from "react-router-dom";
 
 const Component = () => {
   let bedData = [];
@@ -22,7 +23,12 @@ const Component = () => {
   return (
     <ContainerComponent>
       <div className="col-md-12">
-        <h3>Plotly.js</h3>
+        <h3>Dataset Review</h3>
+        <ul>
+          <li>
+            <Link to="/ai/remodel">Pend. Implementation</Link>
+          </li>
+        </ul>
 
         <Plot
           data={[

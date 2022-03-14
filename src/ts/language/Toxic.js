@@ -3,11 +3,18 @@ import * as toxicity from "@tensorflow-models/toxicity";
 import * as tf from "@tensorflow/tfjs";
 import ContainerComponent from "../../mui/Container";
 
-const sentences = ["you suck"];
+const sentences = [
+  "you suck",
+  "idiot",
+  "this text is soo stupid",
+  "today is great day!",
+  "I don't care",
+];
 
 const Component = () => {
   const [model, setModel] = useState();
   const [predictions, setPredictions] = useState();
+  const [phrase, setPhare] = useState();
 
   async function loadModel() {
     try {
@@ -27,7 +34,11 @@ const Component = () => {
   }, []);
 
   async function predictionFunction() {
-    let pred = await model.classify(sentences);
+    setPredictions([]);
+    let num = Math.floor(Math.random() * sentences.length);
+    let temPhrase = sentences[num];
+    setPhare(temPhrase);
+    let pred = await model.classify([temPhrase]);
     setPredictions(pred);
     console.log("predictions", predictions);
   }
@@ -38,7 +49,18 @@ const Component = () => {
         <div className="row no-gutters align-items-center">
           <h4>Toxicity of the text.</h4>
         </div>
+        <div className="row">
+          <p>This model can be used to evaluate reviews and comments.</p>
+        </div>
         <div className="row no-gutters align-items-center">
+          <div className="col-sm-12 mt-3">
+            Check this:
+            {Array.isArray(sentences) &&
+              sentences.map((row, index) => {
+                return <li key={index}>{row}</li>;
+              })}
+          </div>
+
           <div className="col-sm-12">
             <button
               className="btn btn-success"
@@ -47,19 +69,13 @@ const Component = () => {
                 predictionFunction();
               }}
             >
-              Start Detect
+              Random Sentence Detection
             </button>
           </div>
-          <div className="col-sm-12 mt-3">
-            Check this:
-            {Array.isArray(sentences) &&
-              sentences.map((row, index) => {
-                return <li key={index}>{row}</li>;
-              })}
-          </div>
+
           <div className="col-sm-12 mt-3">
             <hr />
-            <strong>Results:</strong>
+            <strong>Results: {phrase} </strong>
             {predictions &&
               Array.isArray(predictions) &&
               predictions.map((row, index) => {

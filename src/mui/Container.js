@@ -130,6 +130,7 @@ export default function PersistentDrawerLeft(props) {
       <Main open={open}>
         <DrawerHeader />
         {props.children}
+        <div>&nbsp;</div>
       </Main>
     </Box>
   );

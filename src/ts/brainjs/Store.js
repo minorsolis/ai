@@ -5,84 +5,16 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import { DATA } from "../../data/storeData";
 
 const Component = () => {
   const brain = window.brain;
   const network = new brain.NeuralNetwork();
   const [pred, setPred] = useState({});
 
-  const rawData = [
-    { dayLabel: "Sunday", day: 0, invoice: "#0001", item: "Bread, Milk" },
-    {
-      dayLabel: "Monday",
-      day: 1,
-      invoice: "#0002",
-      item: "Cereal, Beer, Beef",
-    },
-    { dayLabel: "Tuesday", day: 2, invoice: "#0003", item: "Mustard" },
-    {
-      dayLabel: "Wednesday",
-      day: 3,
-      invoice: "#0004",
-      item: "Whole-grain waffles",
-    },
-    {
-      dayLabel: "Thrusday",
-      day: 4,
-      invoice: "#0005",
-      item: "Tomatoes, Apples",
-    },
-    { dayLabel: "Friday", day: 5, invoice: "#0006", item: "Pizza" },
-    {
-      dayLabel: "Saturday",
-      day: 6,
-      invoice: "#0007",
-      item: "Bread, Milk, News Paper",
-    },
-    { dayLabel: "Sunday", day: 0, invoice: "#0008", item: "Bread, Cheese" },
-    { dayLabel: "Monday", day: 1, invoice: "#0009", item: "Cereal" },
-    { dayLabel: "Tuesday", day: 2, invoice: "#0010", item: "Ketchup" },
-    { dayLabel: "Wednesday", day: 3, invoice: "#0011", item: "Whole-grains" },
-    {
-      dayLabel: "Thrusday",
-      day: 4,
-      invoice: "#0012",
-      item: "Tomatoes, Apples",
-    },
-    { dayLabel: "Friday", day: 5, invoice: "#0013", item: "Bread" },
-    { dayLabel: "Saturday", day: 6, invoice: "#0014", item: "News Paper" },
-    { dayLabel: "Sunday", day: 0, invoice: "#0015", item: "Bread, Milk" },
-    {
-      dayLabel: "Monday",
-      day: 1,
-      invoice: "#0016",
-      item: "Cereal, Beer, Beef",
-    },
-    { dayLabel: "Tuesday", day: 2, invoice: "#0017", item: "Mustard" },
-    {
-      dayLabel: "Wednesday",
-      day: 3,
-      invoice: "#0018",
-      item: "Whole-grain waffles",
-    },
-    {
-      dayLabel: "Thrusday",
-      day: 4,
-      invoice: "#0019",
-      item: "Tomatoes, Apples",
-    },
-    { dayLabel: "Friday", day: 5, invoice: "#0020", item: "Pizza" },
-    {
-      dayLabel: "Saturday",
-      day: 6,
-      invoice: "#0021",
-      item: "Bread, Milk, News Paper",
-    },
-  ];
-
   const weekDays = {};
   const data = [];
-  rawData.forEach((row) => {
+  DATA.forEach((row) => {
     let output = {};
     output[row.item] = 1;
     let dayFormat = row.day / 10;
@@ -124,7 +56,7 @@ const Component = () => {
       <br />
 
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid item xs={5}>
           <Item>
             <Button
               variant="contained"
@@ -137,7 +69,7 @@ const Component = () => {
             </Button>
           </Item>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={7}>
           <Paper>
             <h3>
               Random Day: {pred.dayLabel} (#{pred.day}) <br />
@@ -162,7 +94,7 @@ const Component = () => {
                 </tr>
               </thead>
               <tbody>
-                {rawData.map((row, index) => {
+                {DATA.map((row, index) => {
                   return (
                     <tr key={index}>
                       <td>{row.day}</td>

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import * as tf from "@tensorflow/tfjs";
 import ContainerComponent from "../../mui/Container";
+import Box from "@mui/material/Box";
 
 const Component = () => {
   const [model, setModel] = useState();
@@ -81,11 +82,8 @@ const Component = () => {
             </button>
           </div>
         </div>
-        <div className="row mt-5 no-gutters align-items-center">
-          <div className="col-md-6">
-            <img id="img" width="400" crossOrigin="anonymous" src={imageUrl} />
-          </div>
-          <div className="col-md-6">
+        <Box>
+          <div className="mt-3 col-md-6">
             <h3>Predictions</h3>
             {Array.isArray(predictions) &&
               predictions.map((row, index) => {
@@ -97,6 +95,11 @@ const Component = () => {
                   </li>
                 );
               })}
+          </div>
+        </Box>
+        <div className="row mt-5 no-gutters align-items-center">
+          <div className="col-md-6">
+            <img id="img" width="400" crossOrigin="anonymous" src={imageUrl} />
           </div>
         </div>
       </div>

@@ -24,6 +24,21 @@ const Component = () => {
         </Button>
         <br />
         <br />
+        More examples:{" "}
+        <ul>
+          <li>
+            <a href="https://sky-crocus-marjoram.glitch.me/" target="_blank">
+              Handwritting number reader
+            </a>
+          </li>
+          <li>
+            <a href="https://purrfect-gratis-sulfur.glitch.me/" target="_blank">
+              Object detection
+            </a>
+          </li>
+        </ul>
+        <br />
+        <br />
         Feel free to clone and use then. Have an awesome day! <br />
         <br />
         Minor Solis

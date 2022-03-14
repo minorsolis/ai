@@ -14,16 +14,6 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 const MenuComponent = () => {
   const menu = [
     {
-      label: "Training Models",
-      url: "#",
-    },
-    {
-      label: "Dataset",
-      url: "plot",
-      icon: <ListAltIcon />,
-    },
-    {},
-    {
       label: "Computer Vision",
       url: "#",
     },
@@ -58,6 +48,17 @@ const MenuComponent = () => {
       icon: <StorefrontIcon />,
     },
     {},
+    {
+      label: "Training Models",
+      url: "#",
+    },
+    {
+      label: "Dataset",
+      url: "plot",
+      icon: <ListAltIcon />,
+    },
+    {},
+
     {
       label: "Tensors (Raw)",
       url: "#",

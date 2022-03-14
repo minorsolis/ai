@@ -8,6 +8,7 @@ import Toxic from "./ts/language/Toxic";
 import Plot from "./ts/realestate/Plot";
 import ReModel from "./ts/realestate/ReModel";
 import MultiLayer from "./ts/tensor/MultiLayer";
+import Classification from "./ts/tensor/Classification";
 import BrainStore from "./ts/brainjs/Store";
 
 const rootElement = document.getElementById("root");

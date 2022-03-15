@@ -27,6 +27,11 @@ const Component = () => {
         More examples:{" "}
         <ul>
           <li>
+            <a href="https://short-wry-caribou.glitch.me/" target="_blank">
+              Fashion classifier
+            </a>
+          </li>
+          <li>
             <a href="https://sky-crocus-marjoram.glitch.me/" target="_blank">
               Handwritting number reader
             </a>

@@ -22,6 +22,7 @@ render(
       <Route exact path="/ai/toxic" element={<Toxic />} />
       <Route exact path="/ai/tensor2d" element={<Tensor2d />} />
       <Route exact path="/ai/multilayer" element={<MultiLayer />} />
+      <Route exact path="/ai/classification" element={<Classification />} />
       <Route exact path="/ai/brainStore" element={<BrainStore />} />
       <Route path="/*" element={<App />} />
     </Routes>
